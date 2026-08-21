@@ -207,7 +207,6 @@ try {
 
 return (
 
-{/* FontAwesome CDN Link Inclusion */}
 
 
   {/* Header */}
@@ -229,7 +228,7 @@ return (
           </button>
         ) : (
           <div className="flex items-center gap-3">
-            <span className="bg-white/20 px-3 py-1 rounded-full text-sm font-semibold"><i class="fas fa-chalkboard-teacher mr-1"></i> Багш</span>
+            <span className="bg-white/20 px-3 py-1 rounded-full text-sm font-semibold"><i className="fas fa-chalkboard-teacher mr-1"></i> Багш</span>
             <button onClick={() => setIsTeacher(false)} className="text-white hover:text-red-200 text-sm underline">Гарах</button>
           </div>
         )}
@@ -246,11 +245,11 @@ return (
           onClick={() => setActiveTab(tab.id)}
           className={`flex flex-col items-center justify-center p-4 rounded-2xl border transition-all duration-300 gap-2 ${
             activeTab === tab.id
-              ? `bg-${tab.color}-50 border-${tab.color}-300 ring-2 ring-${tab.color}-400 shadow-md`
+              ? 'bg-indigo-50 border-indigo-300 ring-2 ring-indigo-400 shadow-md'
               : 'bg-white border-slate-200 shadow-sm hover:shadow-md'
           }`}
         >
-          <div className={`w-12 h-12 rounded-full bg-${tab.color}-100 text-${tab.color}-500 flex items-center justify-center text-xl`}>
+          <div className="w-12 h-12 rounded-full bg-indigo-100 text-indigo-500 flex items-center justify-center text-xl">
             <i className={`fas ${tab.icon}`}></i>
           </div>
           <span className="text-sm font-bold text-slate-600">{tab.name}</span>
